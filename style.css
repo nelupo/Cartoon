@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+  color: whitesmoke;
+  text-align: center;
+}
+
+img {
+  height: 500px;
+  width: 100%;
+  max-width: 500px;
+  border: 5px double red;
+  border-radius: 10px;
+  animation: changeSize 5s infinite;
+}
+
+@keyframes changeSize {
+  0% {
+    height: 1000px;
+    width: 1000px;
+    border: 15px solid yellow;
+  }
+  25% {
+    height: 10px;
+    width: 10px;
+    border: 50px dashed pink;
+  }
+  50% {
+    height: 300px;
+    width: 300px;
+    border: 30px solid cyan;
+  }
+  75% {
+    height: 600px;
+    width: 600px;
+    border: 40px double purple;
+  }
+  100% {
+    height: 500px;
+    width: 500px;
+    border: 5px dashed green;
+  }
+}
+
+.container {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.container > p,
+small {
+  font-size: 50px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  img {
+    height: 200px;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    border: 5px double red;
+  }
+  .container {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .container > p,
+  small {
+    font-size: 15px;
+  }
+}
